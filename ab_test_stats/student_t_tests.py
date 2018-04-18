@@ -19,9 +19,11 @@ import matplotlib.pyplot as plt
 # - ratio (numeric, with abs zero)
 
 
+## Needs to test for normality, see test_for_normality.py
+
 ### distributions
 np.random.seed(1)
-n = 10000
+n = 1000
 a = np.random.normal(5,1,n)
 a2 = np.random.normal(5,2,n)
 a3 = np.random.normal(5,5,n)
@@ -54,12 +56,16 @@ sns.kdeplot(d,shade=True)
 sns.kdeplot(e,shade=True)
 
 
-### NEEEDS TO TEST FOR NORMALITY 
-# TODO
 
-# In order to check for normality and equal variances, 
-#  Kolmogorov Smirnov test 
-# (or the Shapiro Wilk test) 
+### TESTS
+# t test
+# f test
+# z test?
+
+
+scipy.stats.ttest_1samp(a,5) 
+
+
 #  Bartlett test 
 # (or Levene test) 
 
@@ -69,35 +75,25 @@ sns.kdeplot(e,shade=True)
 # let us try with the usual p = 0.05
 
 ### test for a given mean
-scipy.stats.ttest_1samp(a,5) # p = 0.3 not sig
-scipy.stats.ttest_1samp(a,4.7) # p = 1  not sig
-scipy.stats.ttest_1samp(a,4.6) # p=0 significant
-## tipping point
+scipy.stats.ttest_1samp(a,5) # p = .21  not sig
+scipy.stats.ttest_1samp(a,4.7) # p = 2.7E-36  sig
 
 ### Test vs different polulation
 scipy.stats.ttest_ind(a,b) #  p=0.98, not significatnt
 scipy.stats.ttest_ind(a,b2) # p=1.4, not significant
-scipy.stats.ttest_ind(a,b3) # p=0.0, significant different
-scipy.stats.ttest_ind(b2,b3) #p=8.8, not significant  
 
-# notice that (a,b3) have different means
-# but (a,b2), (b2,b3) are not significant differently...
-
-### Test for different polulation with different variations
 # Welsh students t-test
 # in practice little difference (?)
-scipy.stats.ttest_ind(a,a2)                 # p = 0.052989134409639219
-scipy.stats.ttest_ind(a,a2,equal_var=False) # p = 0.052994181889589424
-scipy.stats.ttest_ind(a,a3)                 # p = 0.95325713246641941
-scipy.stats.ttest_ind(a,a3,equal_var=False) # p = 0.95325763379486128
-
+scipy.stats.ttest_ind(a,a2)                 # p = 0.82636
+scipy.stats.ttest_ind(a,a2,equal_var=False) # p = 0.82637
 
 ### interpretate results
 # p-result significance for null hypothesis
 # e.g. if p<0.05 discard null (identical mean) with 1/20 security
 # 
 
-### how to use 
+# Margin of error (confidence interval...)
+
 
 
 

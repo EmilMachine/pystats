@@ -1,0 +1,27 @@
+
+From:
+https://www.smashingmagazine.com/2010/06/the-ultimate-guide-to-a-b-testing/
+
+THE MATHEMATICS OF A/B TESTING LINK
+
+Statistics for A/B Tests
+- http://20bits.com/articles/statistical-analysis-and-ab-testing/
+
+How Not to Do A/B Tests
+- http://www.evanmiller.org/how-not-to-run-an-ab-test.html
+
+What You Should Know About the Mathematics of A/B Tests
+- https://vwo.com/blog/what-you-really-need-to-know-about-mathematics-of-ab-split-testing/
+From my own blog.
+
+Easy Statistics for AdWords A/B and Hamsters
+- http://blog.asmartbear.com/easy-statistics-for-adwords-ab-testing-and-hamsters.html
+
+Statistical Significance and Other A/B Test Pitfalls
+- http://www.cennydd.co.uk/2009/statistical-significance-other-ab-test-pitfalls/
+
+
+---
+http://www.tutorialspoint.com/ab_testing/ab_testing_interview_questions.htm
+
+

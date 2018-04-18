@@ -1,8 +1,11 @@
 
 ### TESTING OF MULTIPLES HYPOTHESIS (ie. Bean vs each color bean)
 
+# TUTORIAL
 # https://blog.dominodatalab.com/ab-testing-with-hierarchical-models-in-python/
 
+# pymc tutorial
+# http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
 import pymc
 import numpy as np
 
